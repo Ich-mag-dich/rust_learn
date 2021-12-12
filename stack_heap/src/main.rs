@@ -166,21 +166,30 @@
 //
 //
 
+// fn main() {
+//     let my_string = String::from("hello world");
+//     let my_word = first_word(&my_string);
+
+//     println!("{}", my_word);
+// }
+
+// fn first_word(s: &String) -> &str {
+//     let bytes = s.as_bytes();
+
+//     for (i, &item) in bytes.iter().enumerate() {
+//         if item == b' ' {
+//             return &s[0..i];
+//         }
+//     }
+//     println!("dd");
+//     &s[..]
+// }
+
 fn main() {
-    let my_string = String::from("hello world");
-    let my_word = first_word(&my_string);
-
-    println!("{}", my_word);
-}
-
-fn first_word(s: &String) -> &str {
-    let bytes = s.as_bytes();
-
-    for (i, &item) in bytes.iter().enumerate() {
-        if item == b' ' {
-            return &s[0..i];
-        }
+    let mut s = String::from("Hello~!");
+    {
+        let q = String::from(", world~!");
+        s.push_str(&q);
     }
-
-    &s[..]
+    println!("{}", s);
 }
