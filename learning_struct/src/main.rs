@@ -18,7 +18,7 @@ fn main() {
 
     // 불러올때는 . 찍어서
     println!(
-        "{}, {}, {}, {}",
+        "\nUsername: {}\nEmail: {}\nSign in count: {}\nActive: {}\n",
         user1.username, user1.email, user1.sign_in_count, user1.active
     );
 }
